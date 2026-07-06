@@ -5,12 +5,12 @@ This code example demonstrates the transmission of data using peripheral direct 
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce242310-pdma-2d-transfer)
 
-[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDIzMTAiLCJTcGVjIE51bWJlciI6IjAwMi00MjMxMCIsIkRvYyBUaXRsZSI6IlRSQVZFTyZ0cmFkZTsgVDJHOiBQLURNQSAyRCB0cmFuc2ZlciIsInJpZCI6InRha3Uuc3VnYXdhcmFAaW5maW5lb24uY29tIiwiRG9jIHZlcnNpb24iOiIxLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJBVVRPIiwiRG9jIEZhbWlseSI6IkFVVE8gTUNVIn0=)
+[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDIzMTAiLCJTcGVjIE51bWJlciI6IjAwMi00MjMxMCIsIkRvYyBUaXRsZSI6IlRSQVZFTyZ0cmFkZTsgVDJHOiBQLURNQSAyRCB0cmFuc2ZlciIsInJpZCI6InRha3Uuc3VnYXdhcmFAaW5maW5lb24uY29tIiwiRG9jIHZlcnNpb24iOiIxLjIuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJBVVRPIiwiRG9jIEZhbWlseSI6IkFVVE8gTUNVIn0=)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.7 or later (tested with v3.7)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.8 or later (tested with v3.8)
 - Board support package (BSP) minimum required version: 3.0.0
 - Programming language: C
 - Associated parts: [TRAVEO&trade; T2G family Cluster series](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/32-bit-traveo-t2g-arm-cortex-for-cluster/), [TRAVEO&trade; T2G family body high CYT4BF series](https://www.infineon.com/products/microcontroller/32-bit-traveo-t2g-arm-cortex/for-body/t2g-cyt4bf) and [TRAVEO&trade; T2G family body high CYT6BJ series](https://www.infineon.com/products/microcontroller/32-bit-traveo-t2g-arm-cortex/for-body/t2g-cyt6bj)
@@ -344,6 +344,7 @@ Document title: *CE242310* – *TRAVEO&trade; T2G: P-DMA 2D Transfer*
  ------- | ---------------------
  1.0.0   | New code example
  1.1.0   | Added support for KIT_T2G_B-H-16M_LITE, and updated to support ModusToolbox&trade; v3.7 |
+ 1.2.0   | Updated design.modus of the KIT_T2G_B-H-16M_LITE for addressing CLK warning and updated to support ModusToolbox&trade; v3.8 |
 <br>
 
 
