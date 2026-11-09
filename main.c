@@ -61,13 +61,13 @@ volatile bool g_isInterrupt_SW1 = false;
 /* P-DMA interrupt configuration */
 const cy_stc_sysint_t TX_DMA_2D_INT_CFG =
 {
-    .intrSrc      = ( (NvicMux4_IRQn << CY_SYSINT_INTRSRC_MUXIRQ_SHIFT) | (IRQn_Type)TxDma2D_IRQ ),
+    .intrSrc      = (IRQn_Type)(((NvicMux4_IRQn << CY_SYSINT_INTRSRC_MUXIRQ_SHIFT) | (IRQn_Type)TxDma2D_IRQ )),
     .intrPriority = 6u,
 };
 
 const cy_stc_sysint_t BTN_IRQ_CFG =
 {
-    .intrSrc = ((NvicMux3_IRQn << CY_SYSINT_INTRSRC_MUXIRQ_SHIFT) | CYBSP_USER_BTN_IRQ),
+    .intrSrc = (IRQn_Type)(((NvicMux3_IRQn << CY_SYSINT_INTRSRC_MUXIRQ_SHIFT) | CYBSP_USER_BTN_IRQ)),
     .intrPriority = GPIO_INTERRUPT_PRIORITY
 };
 
@@ -173,8 +173,11 @@ int main(void)
     /* Enable global interrupts */
     __enable_irq();
 
+    #if defined (CY_DEVICE_TVIIBH8M) || defined (CY_DEVICE_TVIIBH4M) || defined (CY_DEVICE_TVIIBH16M) || defined (CY_DEVICE_TVIIC2D6M) || defined (CY_DEVICE_TVIIC2D4M)
+    /* Disable caches for DMA coherency */   
     SCB_DisableICache();
     SCB_DisableDCache();
+    #endif
 
     /* Debug UART init */
     result = (cy_rslt_t)Cy_SCB_UART_Init(UART_HW, &UART_config, &UART_context);
